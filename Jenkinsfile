@@ -16,9 +16,6 @@ pipeline {
 
     /* Deploy - Only for master branch */
     stage('Deploy') {
-      when {
-        branch 'master'
-      }
       steps {
         script {
           def CURRENT_BUILD = currentBuild.number
